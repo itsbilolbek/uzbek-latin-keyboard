@@ -9,7 +9,13 @@ To install the keyboard layout follow these steps:
 $ sudo cp uz /usr/share/X11/xkb/symbols/uz
 ```
 
-Modify `/usr/share/X11/xkb/rules/evdev.xml` file to include the following:
+Modify `evdev.xml` file:
+
+```bash
+$ sudo nano /usr/share/X11/xkb/rules/evdev.xml
+```
+
+And add the following between `<layoutList></layoutList>`:
 
 ```xml
 <layout>
