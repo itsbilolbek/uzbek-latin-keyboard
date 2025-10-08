@@ -6,7 +6,7 @@ Uzbek latin keyboard layout with extra symbols
 To install the keyboard layout follow these steps:
 
 ```bash
-# cp uz /usr/share/X11/xkb/symbols/uz
+$ sudo cp uz /usr/share/X11/xkb/symbols/uz
 ```
 
 Modify `/usr/share/X11/xkb/rules/evdev.xml` file to include the following:
@@ -23,8 +23,8 @@ Modify `/usr/share/X11/xkb/rules/evdev.xml` file to include the following:
 
 Run this command:
 
-```
-sudo dpkg-reconfigure xkb-data
+```bash
+$ sudo dpkg-reconfigure xkb-data
 ```
 
 Restart your computer.
