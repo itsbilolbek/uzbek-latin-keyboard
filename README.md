@@ -10,7 +10,7 @@ This repository contains an enhanced Uzbek Latin keyboard layout for Linux, desi
 
 - **Improved layout:** Optimizes key placement for a more intuitive typing experience.
 
-### Installation
+### Installation
 
 The provided `install.sh` script automates the installation process by copying the layout file and updating the system's XKB configuration.
 
