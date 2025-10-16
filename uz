@@ -70,9 +70,9 @@ xkb_symbols "cyrillic" {
 // The Latin variant is experimental, as there is no official standard for it.
 
 partial alphanumeric_keys
-xkb_symbols "latin-enhanced" {
+xkb_symbols "latin" {
     include "us"
-    name[Group1]= "Uzbek (Latin, enhanced)";
+    name[Group1]= "Uzbek (Latin)";
 
     
     key <AE11> { [ minus, underscore, endash, emdash ] };

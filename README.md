@@ -22,7 +22,7 @@ And add the following between `<layoutList></layoutList>`:
     <configItem>
         <name>uz</name>
         <shortdesc>uz</shortdesc>
-        <description>Uzbek (Latin, enhanced)</description>
+        <description>Uzbek (Latin)</description>
     </configItem>
 </layout>
 ```
