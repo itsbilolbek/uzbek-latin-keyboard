@@ -2,15 +2,19 @@
 
 This repository contains an enhanced Uzbek Latin keyboard layout for Linux, designed to improve the typing experience by providing quick access to special characters used in the language.
 
+### About the keyboard layout
+
+The main focus of this layout is on the following details:
+
+- The [ʻOkina](https://en.wikipedia.org/wiki/%CA%BBOkina) (modifier letter turned comma) used for the letters Oʻ and Gʻ has been placed instead of the apostrophe. This symbol is typographically more correct than a single quote mark: it is not a punctuation mark and does not break the word.
+
+- [The Modifier Letter Apostrophe](https://en.wikipedia.org/wiki/Modifier_letter_apostrophe) (which is used for the glottal stop/tutuq belgisi) has been placed on the grave accent key (the 'Esc' key's neighbor) instead of the 'gravis' (grave accent symbol). This symbol is also typographically correct, similar to the one above.
+
+- This layout also includes letters used in the 1993 Uzbek alphabet and the current Turkish, Azerbaijani, and Turkmen alphabets: **Ŏ, Ğ, Ş, Ç, İ** (these are typed using the AltGr key)."
+
+All other changes are shown in the illustration below:
+
 ![Uzbek keyboard layout](./.github/assets/keyboard-layout.png)
-
-### Features
-
-- **Standard Uzbek Latin characters:** Includes oʻ and gʻ.
-
-- **Enhanced symbols:** Adds endash, emdash, and other common symbols.
-
-- **Improved layout:** Optimizes key placement for a more intuitive typing experience.
 
 ### Installation
 
@@ -53,6 +57,51 @@ To select the layout:
 ### Contributing
 
 If you find an issue or have suggestions for improvements, feel free to open a pull request or an issue on this repository.
+
+### Customizing and Extending This Layout
+
+If you want to modify this layout, add new symbols, or create your own variant, here are the essential steps and resources based on how this layout was built.
+
+#### Key Components of an XKB Layout
+
+The core of this project lies in one file that defines the keyboard's behavior:
+
+- **Symbols File:**
+
+    - **Location:** `uz` (in the root of this repository)
+
+    - **Purpose:** This file is copied to `/usr/share/X11/xkb/symbols/uz` and defines what character each physical key produces under different modifier keys (Shift, AltGr).
+
+#### Understanding Key Definitions
+
+The keys in the `uz` file are defined using a structured format for up to four "levels":
+
+```
+key <KEY_CODE> { [ Level 1, Level 2, Level 3, Level 4 ] };
+```
+
+| Level | Modifier | Meaning | Example for key `E`
+| --- | --- | --- | --- |
+| 1 | None | Normal keypress | `e`
+| 2 | `Shift` | Shift + Key | `E`
+| 3 | `AltGr` | AltGr (Right Alt) + Key | `EuroSign` (€)
+| 4 | `AltGr` + `Shift` | `AltGr + Shift + Key | `cent` (¢)
+
+#### How to Add/Change Characters
+
+1. **Find the Keycode:** Use the XKB keycode (e.g., `<AD03>` for `E`) to locate the key you want to modify in the `uz` file.
+
+2. **Use Keysyms or Unicode:**
+
+    - **Keysym Name:** For standard characters, use the XKB symbolic name (e.g., registered, EuroSign).
+
+    - **Unicode Value:** For less common or non-standard characters (especially when keysyms fail, like for ‰), use the explicit Unicode value (e.g., `U2030` for the per mille sign).
+
+    - **Dead Keys:** To add an accent, use a dead key keysym (e.g., `dead_acute`, `dead_caron`).
+
+3. **Test Your Changes:** Use the xkbcomp tool to check your syntax before running the installer:
+
+4. **Install/Update:** Rerun the `sudo ./install.sh` script to copy the updated `uz` file and reload the system configuration.
 
 ### Attribution and License
 
