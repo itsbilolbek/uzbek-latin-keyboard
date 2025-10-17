@@ -53,3 +53,16 @@ To select the layout:
 ### Contributing
 
 If you find an issue or have suggestions for improvements, feel free to open a pull request or an issue on this repository.
+
+### Attribution and License
+
+This project incorporates code and inspiration from the following open-source projects, which are greatly appreciated.
+
+#### Oʻzbekcha tipografik klaviatura terilmalari
+
+* **Source:** [Farhodjon's uzbek typography layouts](https://github.com/far5n10v/uzbek-typography-layouts)
+* **License:** MIT License
+* **Notes:** The core structure and syntax for the key mappings (Levels 2, 3 and 4) were adapted from this project's symbols file.
+
+Please see the project's main **[LICENSE](LICENSE)** file for the full copyright and permission notices.
+
