@@ -2,6 +2,8 @@
 
 This repository contains an enhanced Uzbek Latin keyboard layout for Linux, designed to improve the typing experience by providing quick access to special characters used in the language.
 
+![Uzbek keyboard layout](./.github/assets/keyboard-layout.png)
+
 ### Features
 
 - **Standard Uzbek Latin characters:** Includes oʻ and gʻ.
