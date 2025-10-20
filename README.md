@@ -2,7 +2,14 @@
 
 This repository contains an enhanced Uzbek Latin keyboard layout for Linux, designed to improve the typing experience by providing quick access to special characters used in the language.
 
-### About the keyboard layout
+## About the keyboard layout (uz)
+
+The provided installer performs two key functions:
+
+1.  It installs the **Uzbek (Latin) layout** with a complete, enhanced set of characters and dead keys for full typographic control.
+2.  It modifies the default **US English (`us`) layout** to ensure the most critical Uzbek characters are accessible without switching layouts.
+
+### The Custom Uzbek (Latin) Layout
 
 The main focus of this layout is on the following details:
 
@@ -15,6 +22,18 @@ The main focus of this layout is on the following details:
 All other changes are shown in the illustration below:
 
 ![Uzbek keyboard layout](./.github/assets/keyboard-layout.png)
+
+### Modified US English (`us`) Layout
+
+The installer also makes targeted changes to the default US layout, allowing users to input critical Uzbek characters quickly without changing their current input source.
+
+| Key | Modifier | Output Character | Unicode | Purpose |
+| :--- | :--- | :--- | :--- | :--- |
+| **Apostrophe (`'`)** | AltGr (Level 3) | **ʻOkina** | U+02BB | Used in **Oʻ** and **Gʻ** (Modifier Letter Turned Comma). |
+| **Grave Accent (`` ` ``)** | AltGr (Level 3) | **Tutuq Belgisi** | U+02BC | Used for the glottal stop (Modifier Letter Apostrophe). |
+
+**Why this modification?**
+This ensures that users who prefer to use the familiar US layout as their primary input method can still access the essential, typographically correct Uzbek characters instantly.
 
 ### Installation
 

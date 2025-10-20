@@ -5,6 +5,7 @@ LAYOUT_NAME="uz"
 VARIANT_NAME="latin"
 DESCRIPTION="Uzbek (Latin)"
 SYMBOLS_FILE="uz"
+SYMBOLS_FILE_EN="en"
 
 # Define the paths
 SYMBOLS_DIR="/usr/share/X11/xkb/symbols/"
@@ -17,6 +18,15 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Step 1: Copy the symbols file
+echo "Copying $SYMBOLS_FILE_EN to $SYMBOLS_DIR..."
+cp "$SYMBOLS_FILE_EN" "$SYMBOLS_DIR"
+if [ $? -eq 0 ]; then
+  echo "✔ Successfully copied $SYMBOLS_FILE_EN."
+else
+  echo "✘ Failed to copy $SYMBOLS_FILE_EN. Aborting."
+  exit 1
+fi
+
 echo "Copying $SYMBOLS_FILE to $SYMBOLS_DIR..."
 cp "$SYMBOLS_FILE" "$SYMBOLS_DIR"
 if [ $? -eq 0 ]; then
