@@ -9,7 +9,7 @@ The provided installer performs two key functions:
 1.  It installs the **Uzbek (Latin) layout** with a complete, enhanced set of characters and dead keys for full typographic control.
 2.  It modifies the default **US English (`us`) layout** to ensure the most critical Uzbek characters are accessible without switching layouts.
 
-### The Custom Uzbek (Latin) Layout
+### 1. The Custom Uzbek (Latin) Layout
 
 The main focus of this layout is on the following details:
 
@@ -23,7 +23,7 @@ All other changes are shown in the illustration below:
 
 ![Uzbek keyboard layout](./.github/assets/keyboard-layout.png)
 
-### Modified US English (`us`) Layout
+### 2. Modified US English (`us`) Layout
 
 The installer also makes targeted changes to the default US layout, allowing users to input critical Uzbek characters quickly without changing their current input source.
 
@@ -35,15 +35,15 @@ The installer also makes targeted changes to the default US layout, allowing use
 **Why this modification?**
 This ensures that users who prefer to use the familiar US layout as their primary input method can still access the essential, typographically correct Uzbek characters instantly.
 
-### Installation
+## Installation
 
 The provided `install.sh` script automates the installation process by copying the layout file and updating the system's XKB configuration.
 
-#### Prerequisites
+### Prerequisites
 
 You must be using a Linux distribution that uses the XKB system, such as Ubuntu, Debian, or Fedora.
 
-#### Steps
+### Steps
 
 1. Clone the repository:
 
@@ -61,7 +61,7 @@ sudo ./install.sh
 
 The script will copy the layout file to the correct system directory, add an entry to the evdev.xml file, and reconfigure your keyboard settings.
 
-### Usage
+## Usage
 
 After a successful installation, you may need to **log out and log back in** for the new layout to appear in your system settings.
 
@@ -73,15 +73,15 @@ To select the layout:
 
 3. Search for **"Uzbek (Latin)"** and add it to your list of input sources.
 
-### Contributing
+## Contributing
 
 If you find an issue or have suggestions for improvements, feel free to open a pull request or an issue on this repository.
 
-### Customizing and Extending This Layout
+## Customizing and Extending This Layout
 
 If you want to modify this layout, add new symbols, or create your own variant, here are the essential steps and resources based on how this layout was built.
 
-#### Key Components of an XKB Layout
+### Key Components of an XKB Layout
 
 The core of this project lies in one file that defines the keyboard's behavior:
 
@@ -91,7 +91,7 @@ The core of this project lies in one file that defines the keyboard's behavior:
 
     - **Purpose:** This file is copied to `/usr/share/X11/xkb/symbols/uz` and defines what character each physical key produces under different modifier keys (Shift, AltGr).
 
-#### Understanding Key Definitions
+### Understanding Key Definitions
 
 The keys in the `uz` file are defined using a structured format for up to four "levels":
 
@@ -106,7 +106,7 @@ key <KEY_CODE> { [ Level 1, Level 2, Level 3, Level 4 ] };
 | 3 | `AltGr` | AltGr (Right Alt) + Key | `EuroSign` (€)
 | 4 | `AltGr` + `Shift` | `AltGr + Shift + Key | `cent` (¢)
 
-#### How to Add/Change Characters
+### How to Add/Change Characters
 
 1. **Find the Keycode:** Use the XKB keycode (e.g., `<AD03>` for `E`) to locate the key you want to modify in the `uz` file.
 
@@ -122,11 +122,11 @@ key <KEY_CODE> { [ Level 1, Level 2, Level 3, Level 4 ] };
 
 4. **Install/Update:** Rerun the `sudo ./install.sh` script to copy the updated `uz` file and reload the system configuration.
 
-### Attribution and License
+## Attribution and License
 
 This project incorporates code and inspiration from the following open-source projects, which are greatly appreciated.
 
-#### Oʻzbekcha tipografik klaviatura terilmalari
+### Oʻzbekcha tipografik klaviatura terilmalari
 
 * **Source:** [Farhodjon's uzbek typography layouts](https://github.com/far5n10v/uzbek-typography-layouts)
 * **License:** MIT License
