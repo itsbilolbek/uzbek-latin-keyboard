@@ -23,6 +23,11 @@ All other changes are shown in the illustration below:
 
 ![Uzbek keyboard layout](./.github/assets/keyboard-layout.png)
 
+- 1-level: Back color buttons
+- 2-level: Uppercase of 1-level. Use SHIFT key
+- 3-level: Purple color buttons
+- 4-level: Uppercase of 3-level. Use SHIFT+ALT(Ring side) key. Blue color buttons
+
 ### 2. Modified US English (`us`) Layout
 
 The installer also makes targeted changes to the default US layout, allowing users to input critical Uzbek characters quickly without changing their current input source.
