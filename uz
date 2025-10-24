@@ -1,9 +1,6 @@
 // Keyboard layouts for Uzbekistan.
 
-// The Cyrillic variant (the default) is standard compliant.
-// The standard was accepted by the official body of Uzbekistan.
-// http://www.uznet.net/index.php?option=com_content&task=view&id=288&Itemid=58
-//
+// The Cyrillic variant of Uzbek language.
 // February 2007, Mashrab Kuvatov <kmashrab@uni-bremen.de>
 
 default partial alphanumeric_keys
@@ -67,7 +64,11 @@ xkb_symbols "cyrillic" {
     key <AB09>	{[           Cyrillic_yu,           Cyrillic_YU,         U00bb,           U201c ]};
 };
 
-// The Latin variant is experimental, as there is no official standard for it.
+// The Latin variant (the default) is standard compliant.
+// The ʻOkina (modifier letter turned comma) used for the letters Oʻ and 
+// Gʻ has been placed instead of the apostrophe. This symbol is typographically more 
+// correct than a single quote mark: it is not a punctuation mark and does not break the word.
+// October 17, 2025 by Bilolbek Normuminov <bilolbeknormuminov@gmail.com>
 
 partial alphanumeric_keys
 xkb_symbols "latin" {
