@@ -5,7 +5,7 @@ LAYOUT_NAME="uz"
 VARIANT_NAME="latin"
 DESCRIPTION="Uzbek (Latin)"
 SYMBOLS_FILE="uz"
-SYMBOLS_FILE_EN="en"
+SYMBOLS_FILE_EN="us"
 
 # Define the paths
 SYMBOLS_DIR="/usr/share/X11/xkb/symbols/"
