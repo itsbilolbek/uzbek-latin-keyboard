@@ -122,5 +122,6 @@ xkb_symbols "latin" {
     key <AB10> { [ slash, question, slash, dead_acute ] };  // SLASH, QUESTION MARK, SLASH, ACUTE ACCENT
 
     key <SPCE> { [ space, space, nobreakspace ] };  // SPACE, SPACE, NO-BREAK SPACE
-    
+
+    include "level3(switch)"
 };
