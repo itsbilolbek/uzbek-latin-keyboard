@@ -74,7 +74,7 @@ xkb_symbols "latin" {
     include "us"
     name[Group1]= "Uzbek (Latin)";
 
-    include "level3(switch)";
+    include "level3(ralt_switch)";
 
     key <TLDE> { [     U02BC,  asciitilde,         grave,      dead_grave ] };  //   MODIFIER LETTER APOSTROPHE,                  TILDE,                               GRAVE ACCENT,                          GRAVE ACCENT
     key <AE01> { [         1,      exclam,   onesuperior,      exclamdown ] };  //                    DIGIT ONE,       EXCLAMATION MARK,                            SUPERSCRIPT ONE,             INVERTED EXCLAMATION MARK
