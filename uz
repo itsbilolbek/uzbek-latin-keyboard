@@ -34,7 +34,7 @@ xkb_symbols "cyrillic" {
     key <AD04>	{[           Cyrillic_ka,           Cyrillic_KA,         U00ae,  dead_abovering ]};
     key <AD05>	{[           Cyrillic_ie,           Cyrillic_IE,         U2122,           U00a9 ]};
     key <AD06>	{[           Cyrillic_en,           Cyrillic_EN,         U00a5                  ]};
-    key <AD07>	{[          Cyrillic_ghe,          Cyrillic_GHE,        U1F1FA,          U1F1FF ]};
+    key <AD07>	{[          Cyrillic_ghe,          Cyrillic_GHE,                                ]};
     key <AD08>	{[          Cyrillic_sha,          Cyrillic_SHA,         U0131,           U0130 ]};
     key <AD09>	{[   Byelorussian_shortu,   Byelorussian_SHORTU,         U0449,           U0429 ]};
     key <AD10>	{[           Cyrillic_ze,           Cyrillic_ZE,         U2032,           U2033 ]};
@@ -57,7 +57,7 @@ xkb_symbols "cyrillic" {
     key <AB02>	{[          Cyrillic_che,          Cyrillic_CHE,         U00d7,           U00b7 ]};
     key <AB03>	{[           Cyrillic_es,           Cyrillic_ES                                 ]};
     key <AB04>	{[           Cyrillic_em,           Cyrillic_EM,     downarrow,      dead_caron ]};
-    key <AB05>	{[            Cyrillic_i,            Cyrillic_I,         UF8FF                  ]};
+    key <AB05>	{[            Cyrillic_i,            Cyrillic_I,                                ]};
     key <AB06>	{[           Cyrillic_te,           Cyrillic_TE,         minus,      dead_tilde ]};
     key <AB07>	{[     Cyrillic_softsign,     Cyrillic_SOFTSIGN,         U2212,           U2022 ]};
     key <AB08>	{[           Cyrillic_be,           Cyrillic_BE,         U00ab,           U201e ]};
@@ -96,7 +96,7 @@ xkb_symbols "latin" {
     key <AD04> { [         r,           R,         U00ae,  dead_abovering ] };  //         LATIN SMALL LETTER R, LATIN CAPITAL LETTER R,                            REGISTERED SIGN,                            RING ABOVE
     key <AD05> { [         t,           T,         U2122,           U00a9 ] };  //         LATIN SMALL LETTER T, LATIN CAPITAL LETTER T,                            TRADE MARK SIGN,                        COPYRIGHT SIGN
     key <AD06> { [         y,           Y,         U00a5                  ] };  //         LATIN SMALL LETTER Y, LATIN CAPITAL LETTER Y,                                   YEN SIGN,                                <none>
-    key <AD07> { [         u,           U,        U1F1FA,          U1F1FF ] };  //         LATIN SMALL LETTER U, LATIN CAPITAL LETTER U,         REGIONAL INDICATOR SYMBOL LETTER U,    REGIONAL INDICATOR SYMBOL LETTER Z
+    key <AD07> { [         u,           U,                                ] };  //         LATIN SMALL LETTER U, LATIN CAPITAL LETTER U
     key <AD08> { [         i,           I,         U0131,           U0130 ] };  //         LATIN SMALL LETTER I, LATIN CAPITAL LETTER I,               LATIN SMALL LETTER DOTLESS I, LATIN CAPITAL LETTER I WITH DOT ABOVE
     key <AD09> { [         o,           O,         U014f,           U014e ] };  //         LATIN SMALL LETTER O, LATIN CAPITAL LETTER O,            LATIN SMALL LETTER O WITH BREVE,     LATIN CAPITAL LETTER O WITH BREVE
     key <AD10> { [         p,           P,         U2032,           U2033 ] };  //         LATIN SMALL LETTER P, LATIN CAPITAL LETTER P,                                      PRIME,                          DOUBLE PRIME
@@ -117,7 +117,7 @@ xkb_symbols "latin" {
     key <AB02> { [         x,           X,         U00d7,           U00b7 ] };  //         LATIN SMALL LETTER X, LATIN CAPITAL LETTER X,                        MULTIPLICATION SIGN,                            MIDDLE DOT
     key <AB03> { [         c,           C,         U00e7,           U00c7 ] };  //         LATIN SMALL LETTER C, LATIN CAPITAL LETTER C,          LATIN SMALL LETTER C WITH CEDILLA,   LATIN CAPITAL LETTER C WITH CEDILLA
     key <AB04> { [         v,           V,     downarrow,      dead_caron ] };  //         LATIN SMALL LETTER V, LATIN CAPITAL LETTER V,                            DOWNWARDS ARROW,                                 CARON
-    key <AB05> { [         b,           B,         UF8FF                  ] };  //         LATIN SMALL LETTER B, LATIN CAPITAL LETTER B,                                 APPLE LOGO,                                <none>
+    key <AB05> { [         b,           B,                                ] };  //         LATIN SMALL LETTER B, LATIN CAPITAL LETTER B,                                     <none>,                                <none>
     key <AB06> { [         n,           N,             n,      dead_tilde ] };  //         LATIN SMALL LETTER N, LATIN CAPITAL LETTER N,                       LATIN SMALL LETTER N,                           SMALL TILDE
     key <AB07> { [         m,           M,         U2212,           U2022 ] };  //         LATIN SMALL LETTER M, LATIN CAPITAL LETTER M,                                 MINUS SIGN,                                BULLET
     key <AB08> { [     comma,        less,         U00ab,           U201e ] };  //                        COMMA,         LESS-THAN SIGN,  LEFT-POINTING DOUBLE ANGLE QUOTATION MARK,           DOUBLE LOW-9 QUOTATION MARK
