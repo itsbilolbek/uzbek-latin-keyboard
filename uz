@@ -143,5 +143,5 @@ xkb_symbols "cyrillic" {
     key <AB08>	{[           Cyrillic_be,           Cyrillic_BE,         U00ab,           U201e ]};
     key <AB09>	{[           Cyrillic_yu,           Cyrillic_YU,         U00bb,           U201c ]};
 
-    include "level3(ralt_switch)";
+    include "level3(ralt_switch)"
 };
