@@ -76,6 +76,8 @@ xkb_symbols "us" {
 
     key <TLDE> { [      grave, asciitilde, U02BC, dead_grave ] };  // GRAVE ACCENT,          TILDE,   MODIFIER LETTER APOSTROPHE,     DEAD GRAVE
     key <AC11> { [ apostrophe,   quotedbl, U02BB, quotedbl   ] };  //   APOSTROPHE, QUOTATION MARK, MODIFIER LETTER TURNED COMMA, QUOTATION MARK
+
+    include "level3(ralt_switch)";
 };
 
 // The Cyrillic keyboard variant for Uzbek language.
