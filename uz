@@ -7,9 +7,9 @@
 // October 17, 2025 by Bilolbek Normuminov <bilolbeknormuminov@gmail.com>
 
 default partial alphanumeric_keys
-xkb_symbols "latin" {
+xkb_symbols "basic" {
     include "us"
-    name[Group1]= "Uzbek (Latin)";
+    name[Group1]= "Uzbek";
 
     key <TLDE> { [     U02BC,  asciitilde,         grave,      dead_grave ] };  //   MODIFIER LETTER APOSTROPHE,                  TILDE,                               GRAVE ACCENT,                          GRAVE ACCENT
     key <AE01> { [         1,      exclam,   onesuperior,      exclamdown ] };  //                    DIGIT ONE,       EXCLAMATION MARK,                            SUPERSCRIPT ONE,             INVERTED EXCLAMATION MARK
@@ -63,13 +63,22 @@ xkb_symbols "latin" {
     include "level3(ralt_switch)";
 };
 
+default partial alphanumeric_keys
+xkb_symbols "us" {
+    include "uz"
+    name[Group1]= "Uzbek (US)";
+
+    key <TLDE> { [      grave, asciitilde, U02BC, dead_grave ] };  // GRAVE ACCENT,          TILDE,   MODIFIER LETTER APOSTROPHE,     DEAD GRAVE
+    key <AC11> { [ apostrophe,   quotedbl, U02BB, quotedbl   ] };  //   APOSTROPHE, QUOTATION MARK, MODIFIER LETTER TURNED COMMA, QUOTATION MARK
+};
+
 // The Cyrillic keyboard variant for Uzbek language.
 // February 2007, Mashrab Kuvatov <kmashrab@uni-bremen.de>
 
 partial alphanumeric_keys
 xkb_symbols "cyrillic" {
 
-    name[Group1]= "Uzbek";
+    name[Group1]= "Uzbek (Cyrillic)";
 
     key <AE01>	{[                     1,                exclam,   onesuperior,      exclamdown ]};
     key <AE02>	{[                     2,              quotedbl,   twosuperior,         onehalf ]};
