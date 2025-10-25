@@ -60,7 +60,7 @@ xkb_symbols "basic" {
 
     key <SPCE> { [     space,       space,  nobreakspace                  ] };  //                 SPACE, SPACE,         NO-BREAK SPACE
 
-    include "level3(ralt_switch)";
+    include "level3(ralt_switch)"
 };
 
 // The US keyboard variant for Uzbek language.
@@ -77,7 +77,7 @@ xkb_symbols "us" {
     key <TLDE> { [      grave, asciitilde, U02BC, dead_grave ] };  // GRAVE ACCENT,          TILDE,   MODIFIER LETTER APOSTROPHE,     DEAD GRAVE
     key <AC11> { [ apostrophe,   quotedbl, U02BB, quotedbl   ] };  //   APOSTROPHE, QUOTATION MARK, MODIFIER LETTER TURNED COMMA, QUOTATION MARK
 
-    include "level3(ralt_switch)";
+    include "level3(ralt_switch)"
 };
 
 // The Cyrillic keyboard variant for Uzbek language.
