@@ -80,6 +80,18 @@ xkb_symbols "us" {
     include "level3(ralt_switch)"
 };
 
+partial alphanumeric_keys
+xkb_symbols "2023" {
+    include "uz"
+    name[Group1]= "Uzbek (2023)";
+
+    key <AD02> { [ U015f, U015e, w, W ] };
+    key <AD11> { [ U00F5, U00D5, bracketleft, braceleft ] };
+    key <AD12> { [ U011F, U011E, bracketright, braceright ] };
+
+    include "level3(ralt_switch)"
+};
+
 // The Cyrillic keyboard variant for Uzbek language.
 // February 2007, Mashrab Kuvatov <kmashrab@uni-bremen.de>
 
