@@ -12,6 +12,12 @@
 +        </variant>
 +        <variant>
 +          <configItem>
++            <name>2023</name>
++            <description>Uzbek (2023)</description>
++          </configItem>
++        </variant>
++        <variant>
++          <configItem>
 +            <name>cyrillic</name>
 +            <description>Uzbek (Cyrillic)</description>
            </configItem>
