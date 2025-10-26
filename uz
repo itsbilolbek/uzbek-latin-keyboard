@@ -1,8 +1,8 @@
 // Keyboard layouts for Uzbekistan.
 
 // The Latin variant (the default) is standard compliant.
-// The ʻOkina (modifier letter turned comma) used for the letters Oʻ and 
-// Gʻ has been placed instead of the apostrophe. This symbol is typographically more 
+// The ʻOkina (modifier letter turned comma) used for the letters Oʻ and
+// Gʻ has been placed instead of the apostrophe. This symbol is typographically more
 // correct than a single quote mark: it is not a punctuation mark and does not break the word.
 // October 17, 2025 by Bilolbek Normuminov <bilolbeknormuminov@gmail.com>
 
@@ -30,12 +30,12 @@ xkb_symbols "basic" {
     key <AD04> { [         r,           R,         U00ae,  dead_abovering ] };  //         LATIN SMALL LETTER R, LATIN CAPITAL LETTER R,                            REGISTERED SIGN,                            RING ABOVE
     key <AD05> { [         t,           T,         U2122,           U00a9 ] };  //         LATIN SMALL LETTER T, LATIN CAPITAL LETTER T,                            TRADE MARK SIGN,                        COPYRIGHT SIGN
     key <AD06> { [         y,           Y,         U00a5                  ] };  //         LATIN SMALL LETTER Y, LATIN CAPITAL LETTER Y,                                   YEN SIGN,                                <none>
-    key <AD07> { [         u,           U,                                ] };  //         LATIN SMALL LETTER U, LATIN CAPITAL LETTER U
+    key <AD07> { [         u,           U                                 ] };  //         LATIN SMALL LETTER U, LATIN CAPITAL LETTER U
     key <AD08> { [         i,           I,         U0131,           U0130 ] };  //         LATIN SMALL LETTER I, LATIN CAPITAL LETTER I,               LATIN SMALL LETTER DOTLESS I, LATIN CAPITAL LETTER I WITH DOT ABOVE
     key <AD09> { [         o,           O,         U014f,           U014e ] };  //         LATIN SMALL LETTER O, LATIN CAPITAL LETTER O,            LATIN SMALL LETTER O WITH BREVE,     LATIN CAPITAL LETTER O WITH BREVE
     key <AD10> { [         p,           P,         U2032,           U2033 ] };  //         LATIN SMALL LETTER P, LATIN CAPITAL LETTER P,                                      PRIME,                          DOUBLE PRIME
     key <BKSL> { [ backslash,         bar,         U2011                  ] };  //                    BACKSLASH,          VERTICAL LINE,                        NON-BREAKING HYPHEN,                                <none>
-    
+
     key <AC01> { [         a,           A,         U2248,           U2318 ] };  //         LATIN SMALL LETTER A, LATIN CAPITAL LETTER A,                            ALMOST EQUAL TO,                PLACE OF INTEREST SIGN
     key <AC02> { [         s,           S,         U015f,           U015e ] };  //         LATIN SMALL LETTER S, LATIN CAPITAL LETTER S,        LATIN SMALL LETTER S WITH CEDILLA *, LATIN CAPITAL LETTER S WITH CEDILLA *
     key <AC03> { [         d,           D,         U00b0,           U2300 ] };  //         LATIN SMALL LETTER D, LATIN CAPITAL LETTER D,                                DEGREE SIGN,                         DIAMETER SIGN
@@ -46,7 +46,7 @@ xkb_symbols "basic" {
     key <AC09> { [         l,           L,         U201d,           U2019 ] };  //         LATIN SMALL LETTER L, LATIN CAPITAL LETTER L,                RIGHT DOUBLE QUOTATION MARK,           RIGHT SINGLE QUOTATION MARK
     key <AC10> { [ semicolon,       colon,     semicolon,  dead_diaeresis ] };  //                    SEMICOLON,                  COLON,                                  SEMICOLON,                             DIAERESIS
     key <AC11> { [     U02BB,    quotedbl,    apostrophe,        quotedbl ] };  // MODIFIER LETTER TURNED COMMA,         QUOTATION MARK,                                 APOSTROPHE,                        QUOTATION MARK
-    
+
     key <AB01> { [         z,           Z,             z,    dead_cedilla ] };  //         LATIN SMALL LETTER Z, LATIN CAPITAL LETTER Z,                       LATIN SMALL LETTER Z,                               CEDILLA
     key <AB02> { [         x,           X,         U00d7,           U00b7 ] };  //         LATIN SMALL LETTER X, LATIN CAPITAL LETTER X,                        MULTIPLICATION SIGN,                            MIDDLE DOT
     key <AB03> { [         c,           C,         U00e7,           U00c7 ] };  //         LATIN SMALL LETTER C, LATIN CAPITAL LETTER C,          LATIN SMALL LETTER C WITH CEDILLA,   LATIN CAPITAL LETTER C WITH CEDILLA
@@ -79,6 +79,10 @@ xkb_symbols "us" {
 
     include "level3(ralt_switch)"
 };
+
+// The 2023 keyboard variant for Uzbek language.
+// This layout introduces typographically correct characters for Uzbek language.
+// It is not yet official.
 
 partial alphanumeric_keys
 xkb_symbols "2023" {
@@ -120,13 +124,13 @@ xkb_symbols "cyrillic" {
     key <AE12>	{[ Cyrillic_ha_descender, Cyrillic_HA_descender,         equal,            plus ]};
     key <TLDE>	{[           Cyrillic_io,           Cyrillic_IO,         grave,      dead_grave ]};
 
-    key <AD01>	{[       Cyrillic_shorti,       Cyrillic_SHORTI,   void_symbol,      dead_breve ]};
+    key <AD01>	{[       Cyrillic_shorti,       Cyrillic_SHORTI, Cyrillic_shorti,      dead_breve ]};
     key <AD02>	{[          Cyrillic_tse,          Cyrillic_TSE                                 ]};
     key <AD03>	{[            Cyrillic_u,            Cyrillic_U,      EuroSign,            cent ]};
     key <AD04>	{[           Cyrillic_ka,           Cyrillic_KA,         U00ae,  dead_abovering ]};
     key <AD05>	{[           Cyrillic_ie,           Cyrillic_IE,         U2122,           U00a9 ]};
     key <AD06>	{[           Cyrillic_en,           Cyrillic_EN,         U00a5                  ]};
-    key <AD07>	{[          Cyrillic_ghe,          Cyrillic_GHE,                                ]};
+    key <AD07>	{[          Cyrillic_ghe,          Cyrillic_GHE                                 ]};
     key <AD08>	{[          Cyrillic_sha,          Cyrillic_SHA,         U0131,           U0130 ]};
     key <AD09>	{[   Byelorussian_shortu,   Byelorussian_SHORTU,         U0449,           U0429 ]};
     key <AD10>	{[           Cyrillic_ze,           Cyrillic_ZE,         U2032,           U2033 ]};
@@ -149,7 +153,7 @@ xkb_symbols "cyrillic" {
     key <AB02>	{[          Cyrillic_che,          Cyrillic_CHE,         U00d7,           U00b7 ]};
     key <AB03>	{[           Cyrillic_es,           Cyrillic_ES                                 ]};
     key <AB04>	{[           Cyrillic_em,           Cyrillic_EM,     downarrow,      dead_caron ]};
-    key <AB05>	{[            Cyrillic_i,            Cyrillic_I,                                ]};
+    key <AB05>	{[            Cyrillic_i,            Cyrillic_I                                 ]};
     key <AB06>	{[           Cyrillic_te,           Cyrillic_TE,         minus,      dead_tilde ]};
     key <AB07>	{[     Cyrillic_softsign,     Cyrillic_SOFTSIGN,         U2212,           U2022 ]};
     key <AB08>	{[           Cyrillic_be,           Cyrillic_BE,         U00ab,           U201e ]};
