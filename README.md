@@ -4,10 +4,12 @@ This repository contains an enhanced Uzbek Latin keyboard layout for Linux, desi
 
 ## About the keyboard layout (uz)
 
-The provided installer performs two key functions:
+The provided installer adds these keyboard layouts:
 
 1.  It installs the **Uzbek (Latin) layout** with a complete, enhanced set of characters and dead keys for full typographic control.
-2.  It modifies the default **US English (`us`) layout** to ensure the most critical Uzbek characters are accessible without switching layouts.
+2.  It installs **Uzbek (US) layout** to ensure the most critical Uzbek characters are accessible for people used to standard US keyboard.
+3.  It install **Uzbek (2023) layout** based on the latest changes to Uzbek alphabet in 2023.
+
 
 ### 1. The Custom Uzbek (Latin) Layout
 
@@ -28,9 +30,9 @@ All other changes are shown in the illustration below:
 - 3-level: Purple color buttons
 - 4-level: Uppercase of 3-level. Use SHIFT+ALT(Ring side) key. Blue color buttons
 
-### 2. Modified US English (`us`) Layout
+### 2. Uzbek (US) Layout
 
-The installer also makes targeted changes to the default US layout, allowing users to input critical Uzbek characters quickly without changing their current input source.
+This is a cleaner, non-intrusive alternative to modifying the standard system files. This layout is essentially the **US QWERTY layout** with two critical Uzbek characters mapped to the third level (AltGr).
 
 | Key | Modifier | Output Character | Unicode | Purpose |
 | :--- | :--- | :--- | :--- | :--- |
@@ -39,6 +41,20 @@ The installer also makes targeted changes to the default US layout, allowing use
 
 **Why this modification?**
 This ensures that users who prefer to use the familiar US layout as their primary input method can still access the essential, typographically correct Uzbek characters instantly.
+
+### 3. Uzbek (2023) Layout
+
+This layout is designed to be **forward-compatible** with the major proposed changes to the Uzbek Latin alphabet (as considered in the 2023 draft). This includes mappings for the simpler, **single-character forms** of the digraphs, which are essential for better digital handling (searching, sorting, and display) of the language.
+
+**Single-Character Mapping**
+
+The following keys have been mapped to the proposed single-character letters:
+
+| Key Position | Standard Character (Example) | 2023 Draft Character | Character Name |
+| --- | --- | --- | --- |
+| W Key | w | Ş / ş | S with Cedilla |
+| [ Key | [ | Õ / õ | O with Tilde |
+| ] Key | ] | Ğ / ğ | G with Breve |
 
 ## Installation
 
