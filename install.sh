@@ -2,10 +2,9 @@
 
 # Define the custom layout name and description
 LAYOUT_NAME="uz"
-VARIANT_NAME="latin"
-DESCRIPTION="Uzbek (Latin)"
+DESCRIPTION="Uzbek"
 SYMBOLS_FILE="uz"
-SYMBOLS_FILE_EN="us"
+PATCH_FILE="evdev_patch.patch"
 
 # Define the paths
 SYMBOLS_DIR="/usr/share/X11/xkb/symbols/"
@@ -17,15 +16,13 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
-# Step 1: Copy the symbols file
-echo "Copying $SYMBOLS_FILE_EN to $SYMBOLS_DIR..."
-cp "$SYMBOLS_FILE_EN" "$SYMBOLS_DIR"
-if [ $? -eq 0 ]; then
-  echo "✔ Successfully copied $SYMBOLS_FILE_EN."
-else
-  echo "✘ Failed to copy $SYMBOLS_FILE_EN. Aborting."
-  exit 1
+# Check for patch file existence
+if [ ! -f "$PATCH_FILE" ]; then
+    echo "✘ Error: Patch file '$PATCH_FILE' not found in the current directory. Aborting."
+    exit 1
 fi
+
+# Step 1: Copy the symbols file
 
 echo "Copying $SYMBOLS_FILE to $SYMBOLS_DIR..."
 cp "$SYMBOLS_FILE" "$SYMBOLS_DIR"
@@ -36,55 +33,35 @@ else
   exit 1
 fi
 
-# Step 2: Check and update the evdev.xml file
-echo "Checking for existing entry in $RULES_FILE..."
+# ----------------------------------------------------------------------
+# Step 2: Apply the patch to evdev.xml using 'patch'
+# The patch utility will handle the XML insertion using context matching.
+# ----------------------------------------------------------------------
+echo "Applying patch to $RULES_FILE using '$PATCH_FILE'..."
 
-# This check looks for a line containing the layout name.
-# It's a simple text check and may not catch all edge cases.
-if grep -q "<name>$LAYOUT_NAME</name>" "$RULES_FILE"; then
-  echo "Entry for '$LAYOUT_NAME' already exists. Checking for variant '$VARIANT_NAME'..."
+# The -p0 option is crucial if the patch file assumes it is being applied
+# from the current directory (which is usually the case for a simple patch).
+patch "$RULES_FILE" < "$PATCH_FILE"
+PATCH_EXIT_CODE=$?
 
-  if grep -q "<name>$VARIANT_NAME</name>" "$RULES_FILE"; then
-    echo "✔ Variant '$VARIANT_NAME' already exists. No changes made to $RULES_FILE."
-  else
-    # Insert the new variant entry
-    echo "Inserting new variant entry for '$VARIANT_NAME'..."
-    sed -i "/<name>$LAYOUT_NAME<\/name>/{:a;n;/variantList/!ba;n;i\
-        <variant>\
-          <configItem>\
-            <name>$VARIANT_NAME</name>\
-            <description>$DESCRIPTION</description>\
-          </configItem>\
-        </variant>}" "$RULES_FILE"
-    echo "✔ Successfully added '$VARIANT_NAME' variant."
-  fi
-else
-  # Insert the full layout entry
-  echo "Entry for '$LAYOUT_NAME' not found. Inserting new layout..."
-  sed -i "/<\/layoutList>/i\
-    <layout>\
-      <configItem>\
-        <name>$LAYOUT_NAME</name>\
-        <description>$DESCRIPTION</description>\
-      </configItem>\
-      <variantList>\
-        <variant>\
-          <configItem>\
-            <name>$VARIANT_NAME</name>\
-            <description>$DESCRIPTION</description>\
-          </configItem>\
-        </variant>\
-      </variantList>\
-    </layout>" "$RULES_FILE"
-  echo "✔ Successfully added new layout and variant."
+if [ $PATCH_EXIT_CODE -eq 0 ]; then
+  echo "✔ Successfully applied patch to $RULES_FILE."
+elif [ $PATCH_EXIT_CODE -eq 1 ]; then
+  echo "⚠ Warning: Patch applied with minor errors or fuzz. Please review $RULES_FILE and any .rej files."
+  echo "This usually happens if the entry already exists or the file has minor changes."
+elif [ $PATCH_EXIT_CODE -eq 2 ]; then
+  echo "✘ Fatal Error: Patch failed completely. The file may be too different from the one the patch was created against. Aborting."
+  exit 1
 fi
 
 # Step 3: Reconfigure XKB data to apply changes
 echo "Reconfiguring XKB data..."
+# This command is common on Debian/Ubuntu systems to rebuild XKB caches.
 dpkg-reconfigure xkb-data
+
 echo "Installation complete. You may need to log out and log back in for changes to take full effect."
 
 # Optional: Set the layout for the current session
 echo "Setting keyboard layout for the current session..."
-setxkbmap -layout "$LAYOUT_NAME" -variant "$VARIANT_NAME"
-echo "Layout is now set to $DESCRIPTION."
+setxkbmap -layout "$LAYOUT_NAME"
+echo "Layout is now set to Uzbek."

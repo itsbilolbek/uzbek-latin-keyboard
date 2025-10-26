@@ -1,0 +1,19 @@
+--- evdev.xml	2025-10-26 14:25:04.866125114 +0900
++++ evdev-new.xml	2025-10-26 14:28:56.844625286 +0900
+@@ -6857,8 +6857,14 @@
+       <variantList>
+         <variant>
+           <configItem>
+-            <name>latin</name>
+-            <description>Uzbek (Latin)</description>
++            <name>us</name>
++            <description>Uzbek (US)</description>
++          </configItem>
++        </variant>
++        <variant>
++          <configItem>
++            <name>cyrillic</name>
++            <description>Uzbek (Cyrillic)</description>
+           </configItem>
+         </variant>
+       </variantList>
