@@ -1,4 +1,4 @@
-# Uzbek (Latin) Keyboard Layout
+# Uzbek Keyboard Layout for Linux
 
 This repository contains an enhanced Uzbek Latin keyboard layout for Linux, designed to improve the typing experience by providing quick access to special characters used in the language.
 
