@@ -2,16 +2,16 @@
 
 This repository contains an enhanced Uzbek Latin keyboard layout for Linux, designed to improve the typing experience by providing quick access to special characters used in the language.
 
-## About the keyboard layout (uz)
+## About the keyboard layout
 
-The provided installer adds these keyboard layouts:
+The provided installer adds these keyboard layout variants:
 
-1.  It installs the **Uzbek (Latin) layout** with a complete, enhanced set of characters and dead keys for full typographic control.
+1.  It installs the **Uzbek layout** with a complete, enhanced set of characters and dead keys for full typographic control.
 2.  It installs **Uzbek (US) layout** to ensure the most critical Uzbek characters are accessible for people used to standard US keyboard.
 3.  It install **Uzbek (2023) layout** based on the latest changes to Uzbek alphabet in 2023.
 
 
-### 1. The Custom Uzbek (Latin) Layout
+### 1. Uzbek Layout
 
 The main focus of this layout is on the following details:
 
@@ -25,14 +25,14 @@ All other changes are shown in the illustration below:
 
 ![Uzbek keyboard layout](./.github/assets/keyboard-layout.png)
 
-- 1-level: Back color buttons
-- 2-level: Uppercase of 1-level. Use SHIFT key
-- 3-level: Purple color buttons
-- 4-level: Uppercase of 3-level. Use SHIFT+ALT(Ring side) key. Blue color buttons
+- 1-level: Black colored keys.
+- 2-level: Uppercase of 1-level. Use SHIFT key.
+- 3-level: Purple colored keys. Use Alt Gr (right Alt) key.
+- 4-level: Uppercase of 3-level. Use SHIFT+ALT Gr (right Alt) key. Blue colored keys.
 
 ### 2. Uzbek (US) Layout
 
-This is a cleaner, non-intrusive alternative to modifying the standard system files. This layout is essentially the **US QWERTY layout** with two critical Uzbek characters mapped to the third level (AltGr).
+This layout is essentially the **US QWERTY layout** with two critical Uzbek characters mapped to the third level (Alt Gr).
 
 | Key | Modifier | Output Character | Unicode | Purpose |
 | :--- | :--- | :--- | :--- | :--- |
@@ -50,11 +50,11 @@ This layout is designed to be **forward-compatible** with the major proposed cha
 
 The following keys have been mapped to the proposed single-character letters:
 
-| Key Position | Standard Character (Example) | 2023 Draft Character | Character Name |
-| --- | --- | --- | --- |
-| W Key | w | Ş / ş | S with Cedilla |
-| [ Key | [ | Õ / õ | O with Tilde |
-| ] Key | ] | Ğ / ğ | G with Breve |
+| Key Position | 2023 Draft Character | Character Name |
+| --- | --- | --- |
+| W Key | Ş / ş | S with Cedilla |
+| \[ Key | Õ / õ | O with Tilde |
+| \] Key | Ğ / ğ | G with Breve |
 
 ## Installation
 
@@ -69,8 +69,8 @@ You must be using a Linux distribution that uses the XKB system, such as Ubuntu,
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/itsbilolbek/uzbek-latin-keyboard.git
-cd uzbek-latin-keyboard
+git clone https://github.com/itsbilolbek/uzbek-linux-keyboard.git
+cd uzbek-linux-keyboard
 ```
 
 2. Run the installation script:
@@ -92,7 +92,7 @@ To select the layout:
 
 2. Add a new keyboard layout.
 
-3. Search for **"Uzbek (Latin)"** and add it to your list of input sources.
+3. Search for **"Uzbek"** and add it to your list of input sources.
 
 ## Contributing
 
